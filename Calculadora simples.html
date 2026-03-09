@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste02</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+
+
+<body>
+    <h2>Calculadora </h2>
+
+
+    <input type="number" id="N1" placeholder="Numero 1">
+    <input type="number" id="N2" placeholder="Numero 2">
+
+
+    <br /> <br />
+    <button onclick="somar()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="multiplicacao()">*</button>
+    <button onclick="divisao()">/</button>
+
+
+    <h3>Resultado : <span id="resultado">0</span></h3>
+
+
+    <script>
+        function pegarValores() {
+            let n1 = Number(document.getElementById("N1").value);
+            let n2 = Number(document.getElementById("N2").value);
+
+
+            return { n1, n2 };
+        }
+        function somar() {
+            let { n1, n2 } = pegarValores();
+            let soma = n1 + n2;
+            mostrarResultado(soma);
+        }
+          function sub() {
+            let { n1, n2 } = pegarValores();
+            let subtra = n1 - n2;
+            mostrarResultado(subtra);
+       }
+    
+      function multiplicacao() {
+            let { n1, n2 } = pegarValores();
+            let multi = n1 * n2;
+            mostrarResultado(multi);
+        }
+          function divisao() {
+            let { n1, n2 } = pegarValores();
+            let div = n1 / n2;
+            mostrarResultado(div);
+        }
+        function mostrarResultado(valor) {
+            document.getElementById("resultado").textContent = valor;
+        }
+    </script>
+</body>
+
+
+</html>

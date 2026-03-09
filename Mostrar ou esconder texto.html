@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste02</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+
+
+<body>
+    <h2>Mostrar ou esconder texto </h2>
+
+
+    <h1 id="texto">TextoTeste</h1>
+
+
+    <br /> <br />
+
+
+    <button onclick="texto()">Click</button>
+
+
+    <script>
+        let visivel = true;
+        function texto() {
+             let texto = document.getElementById("texto");
+             
+            if (visivel) {
+                texto.style.display = "none";
+                visivel = false;
+            } else {
+                texto.style.display = "block";
+                visivel = true;
+            }
+        }
+    </script>
+</body>
+
+
+</html>

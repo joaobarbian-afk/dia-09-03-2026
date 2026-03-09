@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste02</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+
+<body>
+        <h2>trocar texto</h2>
+
+        <p id="texto"> Texto original </p>
+
+        <br /> <br />
+
+        <button onclick="alterarTexto()">Alterar</button>
+
+        <script>
+            function alterarTexto() {
+                document.getElementById("texto").textContent =
+                    "Texto alterado com JavaScript";
+            }
+
+    </script>
+</body>
+
+</html>
